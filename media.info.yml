@@ -1,0 +1,9 @@
+name: Media
+description: 'Media module for Drupal 8'
+type: module
+package: Media
+core: 8.x
+dependencies:
+  - media_entity
+  - media_entity_image
+
