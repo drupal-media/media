@@ -1,0 +1,13 @@
+{
+  "name": "drupal/media",
+  "description": "Media module for Drupal",
+  "type": "drupal-module",
+  "homepage": "https://github.com/drupal-media/media/",
+  "support": {
+    "irc": "irc://irc.freenode.org/drupal-contribute"
+  },
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": { }
+}
+
