@@ -102,7 +102,7 @@ mysql:
 
 before_install:
   - composer self-update
-  - cd ./tests
+  #- cd ./tests
   - composer global require "lionsad/drupal_ti:dev-master"
   - drupal-ti before_install
 
