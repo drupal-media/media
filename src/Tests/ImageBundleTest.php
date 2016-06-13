@@ -16,7 +16,13 @@ class ImageBundleTest extends WebTestBase {
    *
    * @var array
    */
-  public static $modules = ['media', 'media_entity', 'media_entity_image', 'image', 'node'];
+  public static $modules = [
+    'media',
+    'media_entity',
+    'media_entity_image',
+    'image',
+    'node',
+  ];
 
   /**
    * The test media bundle.
@@ -33,13 +39,13 @@ class ImageBundleTest extends WebTestBase {
     $this->testBundle = $this->container->get('entity.manager')->getStorage('media_bundle')->load('image');
 
     $adminUser = $this->drupalCreateUser([
-        'view media',
-        'create media',
-        'update media',
-        'update any media',
-        'delete media',
-        'delete any media',
-        'access media overview',
+      'view media',
+      'create media',
+      'update media',
+      'update any media',
+      'delete media',
+      'delete any media',
+      'access media overview',
     ]);
     $this->drupalLogin($adminUser);
   }
@@ -50,7 +56,7 @@ class ImageBundleTest extends WebTestBase {
   public function testMediaBundleCreationFromModule() {
     $type_configuration = [
       'source_field' => 'field_image',
-      'gather_exif' => false
+      'gather_exif' => FALSE,
     ];
 
     $this->assertTrue((bool) $this->testBundle, 'The media bundle from default configuration has been created in the database.');
@@ -62,7 +68,7 @@ class ImageBundleTest extends WebTestBase {
   }
 
   /**
-   * Tests item creation and thumbnail
+   * Tests item creation and thumbnail.
    */
   public function testMediaBundleItemCreation() {
     // Define the media item name.
@@ -75,11 +81,11 @@ class ImageBundleTest extends WebTestBase {
       'files[field_image_0]' => $file_path,
     ];
 
-    // Save the image
+    // Save the image.
     $this->drupalPostForm('media/add/' . $this->testBundle->id(), $edit, t('Save and publish'));
     $this->drupalPostForm(NULL, ['field_image[0][alt]' => $name], t('Save and publish'));
 
-    // Let's retrieve the media id and corresponding media entity object
+    // Let's retrieve the media id and corresponding media entity object.
     $media_id = $this->container->get('entity.query')->get('media')->execute();
     $media_id = reset($media_id);
     /** @var \Drupal\media_entity\MediaInterface $media */
@@ -92,4 +98,5 @@ class ImageBundleTest extends WebTestBase {
     $default_thumbnail = $image->getDefaultThumbnail();
     $this->assertNotEqual($thumbnail, $default_thumbnail, "The thumbnail generated is different from the default thumbnail.");
   }
+
 }
