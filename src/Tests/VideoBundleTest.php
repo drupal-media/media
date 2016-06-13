@@ -72,7 +72,7 @@ class VideoBundleTest extends WebTestBase {
   }
 
   /**
-   * Tests video media bundle creation from config files.
+   * Tests video media bundle field maps.
    */
   public function testBundleFieldMap() {
     $edit = [
