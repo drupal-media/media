@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_slide
+    - media_entity.bundle.gallery
+    - media_entity.bundle.image
+    - media_entity.bundle.video
+id: media.gallery.field_slide
+field_name: field_slide
+entity_type: media
+bundle: gallery
+label: Slides
+description: 'Image or Video type of content for slideshow'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

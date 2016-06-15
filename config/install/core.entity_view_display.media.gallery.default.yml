@@ -1,0 +1,102 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.gallery.field_slide
+    - media_entity.bundle.gallery
+  module:
+    - slick_media
+id: media.gallery.default
+targetEntityType: media
+bundle: gallery
+mode: default
+content:
+  field_slide:
+    weight: 0
+    label: hidden
+    settings:
+      vanilla: true
+      optionset: default
+      optionset_thumbnail: ''
+      skin: ''
+      skin_thumbnail: ''
+      image_style: gallery_item
+      thumbnail_style: ''
+      thumbnail_effect: ''
+      media_switch: ''
+      ratio: ''
+      view_mode: gallery
+      image: ''
+      title: ''
+      link: ''
+      layout: ''
+      thumbnail_caption: ''
+      class: ''
+      cache: -1
+      sizes: ''
+      current_view_mode: default
+      background: false
+      caption:
+        field_image: '0'
+        field_id: '0'
+        field_source: '0'
+        field_video: '0'
+      skin_arrows: ''
+      skin_dots: ''
+      responsive_image_style: ''
+      iframe_lazy: false
+      thumbnail: ''
+      overlay: ''
+      id: ''
+      breakpoints:
+        xs:
+          breakpoint: ''
+          image_style: ''
+          width: ''
+        sm:
+          breakpoint: ''
+          image_style: ''
+          width: ''
+        md:
+          breakpoint: ''
+          image_style: ''
+          width: ''
+        lg:
+          breakpoint: ''
+          image_style: ''
+          width: ''
+        xl:
+          breakpoint: ''
+          image_style: ''
+          width: ''
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      color_field: ''
+      grid: 0
+      grid_header: ''
+      grid_medium: 0
+      grid_small: 0
+      preserve_keys: false
+      visible_items: 0
+      display: main
+      item_id: ''
+      box_caption: {  }
+      box_caption_custom: ''
+      box_style: ''
+      icon: false
+      dimension: ''
+    third_party_settings: {  }
+    type: slick_media
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

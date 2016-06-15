@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_slideshow
+id: gallery
+label: Gallery
+description: 'Use Gallery for creating a collection of different media items.'
+type: slideshow
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  source_field: field_slide
+field_map: {  }

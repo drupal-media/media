@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+name: gallery_item
+label: 'Gallery item'
+effects: {  }

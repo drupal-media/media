@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - media
+  module:
+    - media_entity
+id: media.gallery
+label: Gallery
+targetEntityType: media
+cache: true
