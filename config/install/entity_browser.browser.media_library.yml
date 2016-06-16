@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - views
+name: media_library
+label: 'Media Library'
+display: iframe
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select media'
+  auto_open: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  f7742394-192d-4026-9947-055f7e167fb8:
+    settings:
+      view: media_library
+      view_display: entity_browser_1
+    uuid: f7742394-192d-4026-9947-055f7e167fb8
+    weight: 1
+    label: 'Media listing'
+    id: view
+submit_text: Select

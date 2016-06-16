@@ -8,3 +8,4 @@ dependencies:
   - media_entity_image:media_entity_image
   - video_embed_field:video_embed_field
   - video_embed_field:video_embed_media
+  - entity_browser:entity_browser
