@@ -10,6 +10,14 @@ use Drupal\simpletest\WebTestBase;
  * @group media
  */
 class ImageBundleTest extends WebTestBase {
+  /**
+   * Exempt from strict schema checking.
+   *
+   * @see \Drupal\Core\Config\Testing\ConfigSchemaChecker
+   *
+   * @var bool
+   */
+  protected $strictConfigSchema = FALSE;
 
   /**
    * Modules to enable.

@@ -8,3 +8,5 @@ dependencies:
   - media_entity_image:media_entity_image
   - video_embed_field:video_embed_field
   - video_embed_field:video_embed_media
+  - media_entity_slideshow:media_entity_slideshow
+  - slick_media:slick_media

@@ -1,5 +1,7 @@
 # Media Module
 
+[![Build Status](https://travis-ci.org/drupal-media/media.svg?branch=8.x-1.x)](https://travis-ci.org/drupal-media/media) [![Scrutinizer](https://scrutinizer-ci.com/g/drupal-media/media/badges/quality-score.png?b=8.x-1.x)](https://scrutinizer-ci.com/g/drupal-media/media/?branch=8.x-1.x)
+
 ## Introduction
 
 The Media module provides an extensible framework for managing files and multimedia assets, regardless of whether they are hosted on your own site or a 3rd party site.
@@ -19,7 +21,9 @@ After downloading the module in the modules folder, visit the Extend (/admin/mod
 
 ## Configuration
 
-@ToDo
+1. Enable the module
+2. visit /media/add to add media content to website.
+3. Visit /admin/structure/media to edit the default media bundles.
 
 ## Technical details
 
