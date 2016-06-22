@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_help().
@@ -21,4 +23,50 @@ function media_help($route_name, RouteMatchInterface $route_match) {
 
     default:
   }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function media_form_alter(&$form, FormStateInterface &$form_state) {
+  if ($form['#form_id'] == 'entity_browser_media_library_form') {
+    // Style the submit button.
+    $form['actions']['submit']['#attributes']['class'][] = 'button--primary';
+    $form['actions']['submit']['#attributes']['class'][] = 'entity-browser-modal-target';
+  }
+}
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function media_library_info_alter(&$libraries, $extension) {
+  // Optionally use the Libraries module to determine our library paths.
+  if ($extension == 'media' && \Drupal::moduleHandler()->moduleExists('libraries')) {
+    $imagesloaded_path = libraries_get_path('imagesloaded') . '/imagesloaded.pkgd.min.js';
+    $masonry_path = libraries_get_path('masonry') . '/dist/masonry.pkgd.min.js';
+
+    $libraries['imagesloaded']['js'] = ['/' . $imagesloaded_path => ['minified' => 'true']];
+    $libraries['masonry']['js'] = ['/' . $masonry_path => ['minified' => 'true']];
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ *
+ * Adds the media.view library to the media views.
+ */
+function media_views_pre_render(ViewExecutable $view) {
+  if (isset($view) && ($view->storage->id() == 'media_library' || $view->storage->id() == 'global_media_library')) {
+    $view->element['#attached']['library'][] = 'media/view';
+  }
+}
+
+/**
+ * Implements hook_menu_local_actions_alter().
+ *
+ * Adds the add media button from media_entity on library pages.
+ */
+function media_menu_local_actions_alter(&$local_actions) {
+  $local_actions['media.add']['appears_on'][] = 'view.media_library.user_media_library';
+  $local_actions['media.add']['appears_on'][] = 'view.media_library.global_media_library_page';
 }

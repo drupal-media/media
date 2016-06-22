@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - dropzonejs_eb_widget
+    - views
+_core:
+  default_config_hash: bNNpEa_nxz8tAxpUCcHt6otvmZWP4T2XgODqgsJhxv0
+name: media_library
+label: 'Media Library'
+display: modal
+display_configuration:
+  widget_ids:
+    735d146c-a4b2-4327-a057-d109e0905e05: 'Upload files'
+    f7742394-192d-4026-9947-055f7e167fb8: 'Files listing'
+  width: '950'
+  height: '600'
+  link_text: 'Select media'
+  auto_open: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  f7742394-192d-4026-9947-055f7e167fb8:
+    settings:
+      view: media_library
+      view_display: entity_browser_1
+    uuid: f7742394-192d-4026-9947-055f7e167fb8
+    weight: 1
+    label: 'Media listing'
+    id: view
+  735d146c-a4b2-4327-a057-d109e0905e05:
+    settings:
+      upload_location: 'public://'
+      dropzone_description: 'Drag and drop files here to upload'
+      extensions: 'png jpg jpeg gif'
+      max_filesize: '2 M'
+    uuid: 735d146c-a4b2-4327-a057-d109e0905e05
+    weight: 0
+    label: 'Upload files'
+    id: dropzonejs
+submit_text: 'Select media files'
