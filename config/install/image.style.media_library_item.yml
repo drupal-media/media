@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: CxKqipu7yjtFAn40Pe3DhGQ3BbeagRtTMY6r4LbMARM
+name: media_library_item
+label: 'Media library item'
+effects:
+  4d207f58-9aeb-4cc2-9e68-b73febc92d5c:
+    uuid: 4d207f58-9aeb-4cc2-9e68-b73febc92d5c
+    id: image_scale
+    weight: 1
+    data:
+      width: 100
+      height: 100
+      upscale: true

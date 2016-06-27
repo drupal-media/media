@@ -10,3 +10,5 @@ dependencies:
   - video_embed_field:video_embed_media
   - media_entity_slideshow:media_entity_slideshow
   - slick_media:slick_media
+  - entity_browser:entity_browser
+  - dropzonejs:dropzonejs_eb_widget
