@@ -11,4 +11,5 @@ dependencies:
   - media_entity_slideshow:media_entity_slideshow
   - slick_media:slick_media
   - entity_browser:entity_browser
+  - entity_browser:entity_browser_entity_form
   - dropzonejs:dropzonejs_eb_widget

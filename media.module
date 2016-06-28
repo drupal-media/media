@@ -70,3 +70,11 @@ function media_menu_local_actions_alter(&$local_actions) {
   $local_actions['media.add']['appears_on'][] = 'view.media_library.user_media_library';
   $local_actions['media.add']['appears_on'][] = 'view.media_library.global_media_library_page';
 }
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function media_entity_type_alter(array &$entity_types) {
+  $field_name = \Drupal::config('media_entity.bundle.gallery')->get('type_configuration.source_field');
+  $entity_types['media']->addConstraint('GalleryMediaBundle', array('sourceFieldName' => $field_name));
+}

@@ -6,13 +6,15 @@ dependencies:
     - media_entity.bundle.gallery
     - media_entity.bundle.image
     - media_entity.bundle.video
+_core:
+  default_config_hash: '-Vokz3E77rQR00KAD_b4OzhvWKUK_0RWM68Bs8jeAhM'
 id: media.gallery.field_slide
 field_name: field_slide
 entity_type: media
 bundle: gallery
 label: Slides
-description: 'Image or Video type of content for slideshow'
-required: true
+description: 'Media type items for slideshow'
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
