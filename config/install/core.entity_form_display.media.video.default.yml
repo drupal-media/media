@@ -9,17 +9,12 @@ dependencies:
   module:
     - video_embed_field
 _core:
-  default_config_hash: yJ-pzHf0J9QMSSJe1IHY6pjlGdg8J_QG2ex19ipUeyU
+  default_config_hash: GdqnuZZ_bvxIafOwc6M2F9NacTMUODIzNWxiiFCy17E
 id: media.video.default
 targetEntityType: media
 bundle: video
 mode: default
 content:
-  created:
-    type: datetime_timestamp
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
   field_video:
     type: video_embed_field_textfield
     weight: 1
@@ -32,14 +27,8 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
-    weight: 2
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
 hidden:
+  created: true
   field_id: true
   field_source: true
+  uid: true

@@ -8,54 +8,51 @@ dependencies:
     - dropzonejs_eb_widget
     - entity_browser_entity_form
     - views
-_core:
-  default_config_hash: 4iRNH-RBNv_P6dA3wXHiA9BjuBZYMOXScslFy1qoPQI
-name: media_library
-label: 'Media Library'
+name: gallery_media_library
+label: 'Gallery media library'
 display: modal
 display_configuration:
   width: '950'
   height: '600'
   link_text: 'Select media'
-  auto_open: true
 selection_display: no_display
 selection_display_configuration: {  }
 widget_selector: tabs
 widget_selector_configuration: {  }
 widgets:
-  f7742394-192d-4026-9947-055f7e167fb8:
+  c1df873e-9e41-41c0-b22f-f4b56d51d9c0:
     settings:
-      view: media_library
-      view_display: media_select_modal
-    uuid: f7742394-192d-4026-9947-055f7e167fb8
-    weight: 1
-    label: 'All Media'
-    id: view
-  1d256d06-dcd8-4fb8-86a9-52c8024c2c73:
-    settings:
-      media_entity_bundle: 'image'
+      media_entity_bundle: image
       upload_location: 'public://[date:custom:Y]-[date:custom:m]'
       dropzone_description: 'Drag and drop files here to upload'
       max_filesize: 2M
-      extensions: 'png jpg jpeg gif'
-    uuid: 1d256d06-dcd8-4fb8-86a9-52c8024c2c73
-    weight: 0
-    label: 'Upload files'
+      extensions: 'jpg jpeg gif png'
+    uuid: c1df873e-9e41-41c0-b22f-f4b56d51d9c0
+    weight: -8
+    label: 'Upload images'
     id: dropzonejs_media_entity
-  6c56db32-05ff-4665-bf1a-c146b129c616:
+  3da26b3a-8d09-4270-a0a8-a89691b0b73a:
     settings:
       view: media_library
-      view_display: user_media_select_modal
-    uuid: 6c56db32-05ff-4665-bf1a-c146b129c616
-    weight: 3
-    label: 'My Media'
+      view_display: gallery_media_select_modal
+    uuid: 3da26b3a-8d09-4270-a0a8-a89691b0b73a
+    weight: -10
+    label: 'All media'
     id: view
-  ccb53382-c6c1-4e74-8d3a-9f7e850d6ebc:
+  297329aa-dcf8-4ec3-aac2-dd4f46c89d83:
+    settings:
+      view: media_library
+      view_display: gallery_user_media_select_modal
+    uuid: 297329aa-dcf8-4ec3-aac2-dd4f46c89d83
+    weight: -9
+    label: 'My media'
+    id: view
+  6cf9f4b5-d1b8-4325-96ef-a48da34e4ea7:
     settings:
       entity_type: media
       bundle: video
-    uuid: ccb53382-c6c1-4e74-8d3a-9f7e850d6ebc
-    weight: 4
+    uuid: 6cf9f4b5-d1b8-4325-96ef-a48da34e4ea7
+    weight: -7
     label: 'Add video'
     id: entity_form
 submit_text: 'Select media files'

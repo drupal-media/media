@@ -80,16 +80,13 @@ class GalleryBundleTest extends WebTestBase {
     // Let's add one image and one video.
     $imageItem = $this->addImageItem();
     $videoItem = $this->addVideoItem();
-
     $this->drupalGet('media/add/gallery');
+    $pathValue = (string) current($this->xpath('//input[@data-drupal-selector="edit-field-slide-entity-browser-path"]/@value'));
     $edit = [
       'name[0][value]' => 'Gallery item',
-      'field_slide[0][target_id]' => $imageItem['name[0][value]'] . ' (' . $imageItem['id'] . ')',
-      'field_slide[0][_weight]' => 0,
+      'field_slide[target_id]' => $imageItem['id'] . ' ' . $videoItem['id'],
+      'field_slide[entity_browser][path]' => $pathValue,
     ];
-    $this->drupalPostAjaxForm(NULL, $edit, 'field_slide_add_more');
-    $edit['field_slide[1][target_id]'] = $videoItem['name[0][value]'] . ' (' . $videoItem['id'] . ')';
-    $edit['field_slide[1][_weight]'] = 1;
     $this->drupalPostForm(NULL, $edit, t('Save and publish'));
 
     // Let's load all the media items.
@@ -106,12 +103,9 @@ class GalleryBundleTest extends WebTestBase {
     $this->drupalGet('media/add/gallery');
     $edit = [
       'name[0][value]' => 'Gallery item 2',
-      'field_slide[0][target_id]' => $videoItem['name[0][value]'] . ' (' . $videoItem['id'] . ')',
-      'field_slide[0][_weight]' => 0,
+      'field_slide[target_id]' => $videoItem['id'] . ' ' . $imageItem['id'] ,
+      'field_slide[entity_browser][path]' => $pathValue,
     ];
-    $this->drupalPostAjaxForm(NULL, $edit, 'field_slide_add_more');
-    $edit['field_slide[1][target_id]'] = $imageItem['name[0][value]'] . ' (' . $imageItem['id'] . ')';
-    $edit['field_slide[1][_weight]'] = 1;
     $this->drupalPostForm(NULL, $edit, t('Save and publish'));
 
     // Let's check the thumbnail again.
