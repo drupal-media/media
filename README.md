@@ -14,6 +14,9 @@ Media's aim is to solve Drupal's long standing media handling problem.
 * [Media Entity Image](https://www.drupal.org/project/media_entity_image)
 * [Video Embed Field](https://www.drupal.org/project/video_embed_field)
 * [Media Entity Slideshow](https://www.drupal.org/project/media_entity_slideshow)
+* [Slick Media](https://www.drupal.org/project/slick_media)
+* [Entity Browser](https://www.drupal.org/project/entity_browser)
+* [Dropzonejs](https://www.drupal.org/project/dropzonejs)
 
 ## Installation
 

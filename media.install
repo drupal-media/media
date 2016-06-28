@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * @file
+ * Defines library requirements for Media module.
+ */
+
+use Drupal\views\Entity\View;
+
+/**
+ * Implements hook_requirements().
+ */
+function media_requirements($phase) {
+
+  $requirements = [];
+
+  // Optionally use the Libraries module to determine our library paths.
+  if (\Drupal::moduleHandler()->moduleExists('libraries')) {
+    $imagesloaded_path = libraries_get_path('imagesloaded') . '/imagesloaded.pkgd.min.js';
+    $masonry_path = libraries_get_path('masonry') . '/dist/masonry.pkgd.min.js';
+  }
+  else {
+    $imagesloaded_path = DRUPAL_ROOT . '/libraries/imagesloaded/imagesloaded.pkgd.min.js';
+    $masonry_path = DRUPAL_ROOT . '/libraries/masonry/dist/masonry.pkgd.min.js';
+  }
+
+  if (!file_exists($imagesloaded_path)) {
+    $requirements['imagesloaded'] = array(
+      'title' => t('imagesLoaded library missing'),
+      'description' => t(
+        'Media requires the imagesLoaded library. Download the newest release
+from https://github.com/desandro/imagesloaded releases and place it in /libraries'
+      ),
+      'severity' => REQUIREMENT_ERROR,
+    );
+  }
+
+  if (!file_exists($masonry_path)) {
+    $requirements['masonry'] = array(
+      'title' => t('Dropzone library missing'),
+      'description' => t(
+        'Media requires the Masonry library. Download the newest release from
+https://github.com/desandro/masonry/releases and place it in /libraries'
+      ),
+      'severity' => REQUIREMENT_ERROR,
+    );
+  }
+
+  return $requirements;
+}
+
+/**
+ * Implements hook_install().
+ */
+function media_install() {
+  // Disable the media view provided by media_entity.
+  if ($view = View::load('media')) {
+    $view->set('status', FALSE);
+    $view->save();
+  }
+}

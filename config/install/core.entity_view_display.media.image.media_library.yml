@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.image.field_image
+    - image.style.media_library_item
+    - media_entity.bundle.image
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: R3AspO8uJJjAq_RyxT35nzRCriMjTj5qmyAlkCNlEtg
+id: media.image.media_library
+targetEntityType: media
+bundle: image
+mode: media_library
+content:
+  created:
+    type: timestamp
+    weight: 3
+    label: hidden
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  name:
+    label: hidden
+    type: string
+    weight: 0
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  thumbnail:
+    type: image
+    weight: 1
+    label: hidden
+    settings:
+      image_style: media_library_item
+      image_link: ''
+    third_party_settings: {  }
+  uid:
+    type: author
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_image: true
