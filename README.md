@@ -16,6 +16,7 @@ Media's aim is to solve Drupal's long standing media handling problem.
 * [Media Entity Slideshow](https://www.drupal.org/project/media_entity_slideshow)
 * [Media Entity Instagram](https://www.drupal.org/project/media_entity_instagram)
 * [Media Entity Twitter](https://www.drupal.org/project/media_entity_twitter)
+* [Media Entity Document](https://www.drupal.org/project/media_entity_document)
 * [Slick Media](https://www.drupal.org/project/slick_media)
 * [Entity Browser](https://www.drupal.org/project/entity_browser)
 * [Dropzonejs](https://www.drupal.org/project/dropzonejs)

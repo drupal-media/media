@@ -58,4 +58,8 @@ function media_install() {
     $view->set('status', FALSE);
     $view->save();
   }
+  // Copy the document icon files.
+  $source = drupal_get_path('module', 'media') . '/images/icons';
+  $destination = \Drupal::config('media_entity.settings')->get('icon_base');
+  media_entity_copy_icons($source, $destination);
 }

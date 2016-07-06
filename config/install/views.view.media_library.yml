@@ -9,7 +9,7 @@ dependencies:
     - media_entity
     - user
 _core:
-  default_config_hash: HhTGyGU-mqSKrZPtVhY37JnYvP5F3pWfMgEJjKrITOo
+  default_config_hash: 0ji-_wovtfp2r4Pi6Rkl-EdQB0cymoCPWDy2Mz95csQ
 id: media_library
 label: 'Media Library'
 module: views
@@ -304,6 +304,8 @@ display:
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
       tags:
+        - 'config:core.entity_view_display.media.document.default'
+        - 'config:core.entity_view_display.media.document.media_library'
         - 'config:core.entity_view_display.media.gallery.default'
         - 'config:core.entity_view_display.media.gallery.media_library'
         - 'config:core.entity_view_display.media.image.default'
@@ -622,6 +624,8 @@ display:
         - 'url.query_args:sort_order'
         - user.permissions
       tags:
+        - 'config:core.entity_view_display.media.document.default'
+        - 'config:core.entity_view_display.media.document.media_library'
         - 'config:core.entity_view_display.media.gallery.default'
         - 'config:core.entity_view_display.media.gallery.media_library'
         - 'config:core.entity_view_display.media.image.default'
@@ -981,6 +985,8 @@ display:
         - user
         - user.permissions
       tags:
+        - 'config:core.entity_view_display.media.document.default'
+        - 'config:core.entity_view_display.media.document.media_library'
         - 'config:core.entity_view_display.media.gallery.default'
         - 'config:core.entity_view_display.media.gallery.media_library'
         - 'config:core.entity_view_display.media.image.default'
@@ -1446,6 +1452,8 @@ display:
         - 'url.query_args:sort_order'
         - user.permissions
       tags:
+        - 'config:core.entity_view_display.media.document.default'
+        - 'config:core.entity_view_display.media.document.media_library'
         - 'config:core.entity_view_display.media.gallery.default'
         - 'config:core.entity_view_display.media.gallery.media_library'
         - 'config:core.entity_view_display.media.image.default'
@@ -1722,6 +1730,8 @@ display:
         - 'url.query_args:sort_order'
         - user.permissions
       tags:
+        - 'config:core.entity_view_display.media.document.default'
+        - 'config:core.entity_view_display.media.document.media_library'
         - 'config:core.entity_view_display.media.gallery.default'
         - 'config:core.entity_view_display.media.gallery.media_library'
         - 'config:core.entity_view_display.media.image.default'
@@ -2222,6 +2232,8 @@ display:
         - 'url.query_args:sort_order'
         - user.permissions
       tags:
+        - 'config:core.entity_view_display.media.document.default'
+        - 'config:core.entity_view_display.media.document.media_library'
         - 'config:core.entity_view_display.media.gallery.default'
         - 'config:core.entity_view_display.media.gallery.media_library'
         - 'config:core.entity_view_display.media.image.default'
@@ -2539,6 +2551,8 @@ display:
         - user
         - user.permissions
       tags:
+        - 'config:core.entity_view_display.media.document.default'
+        - 'config:core.entity_view_display.media.document.media_library'
         - 'config:core.entity_view_display.media.gallery.default'
         - 'config:core.entity_view_display.media.gallery.media_library'
         - 'config:core.entity_view_display.media.image.default'
