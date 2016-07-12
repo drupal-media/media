@@ -34,6 +34,10 @@ function media_form_alter(&$form, FormStateInterface &$form_state) {
     $form['actions']['submit']['#attributes']['class'][] = 'button--primary';
     $form['actions']['submit']['#attributes']['class'][] = 'entity-browser-modal-target';
   }
+  // Remove the Gallery option from create gallery view's bundle filters.
+  if ($form['#id'] == 'views-exposed-form-media-library-gallery-media-select-modal' || $form['#id'] == 'views-exposed-form-media-library-gallery-user-media-select-modal') {
+    unset($form['bundle_1']['#options']['gallery']);
+  }
 }
 
 /**
