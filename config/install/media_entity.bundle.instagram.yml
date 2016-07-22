@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_instagram
+id: instagram
+label: 'Instagram Post'
+description: 'Use this to attach Instagram posts to your content.'
+type: instagram
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  use_instagram_api: false
+  source_field: field_instagram_url
+  client_id: ''
+field_map:
+  shortcode: field_instagram_shortcode
