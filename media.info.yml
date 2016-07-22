@@ -9,7 +9,9 @@ dependencies:
   - video_embed_field:video_embed_field
   - video_embed_field:video_embed_media
   - media_entity_slideshow:media_entity_slideshow
+  - media_entity_instagram:media_entity_instagram
   - slick_media:slick_media
   - entity_browser:entity_browser
   - entity_browser:entity_browser_entity_form
   - dropzonejs:dropzonejs_eb_widget
+  - link:link
