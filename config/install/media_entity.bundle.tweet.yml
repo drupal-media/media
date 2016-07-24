@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_twitter
+id: tweet
+label: Tweet
+description: 'Use this to embed Twitter content on your site.'
+type: twitter
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  use_twitter_api: false
+  source_field: field_tweet_url
+  consumer_key: ''
+  consumer_secret: ''
+  oauth_access_token: ''
+  oauth_access_token_secret: ''
+field_map:
+  id: field_tweet_id
+  user: field_tweet_author

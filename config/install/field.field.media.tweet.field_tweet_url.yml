@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_tweet_url
+    - media_entity.bundle.tweet
+  module:
+    - link
+id: media.tweet.field_tweet_url
+field_name: field_tweet_url
+entity_type: media
+bundle: tweet
+label: 'Tweet URL'
+description: 'This field stores the URL of the tweet. Example: https://twitter.com/jack/status/20'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link
