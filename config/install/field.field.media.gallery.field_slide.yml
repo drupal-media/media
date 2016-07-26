@@ -3,8 +3,11 @@ status: true
 dependencies:
   config:
     - field.storage.media.field_slide
+    - media_entity.bundle.document
     - media_entity.bundle.gallery
     - media_entity.bundle.image
+    - media_entity.bundle.instagram
+    - media_entity.bundle.tweet
     - media_entity.bundle.video
 _core:
   default_config_hash: '-Vokz3E77rQR00KAD_b4OzhvWKUK_0RWM68Bs8jeAhM'
@@ -22,7 +25,10 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
+      document: document
       image: image
+      instagram: instagram
+      tweet: tweet
       video: video
     sort:
       field: _none
