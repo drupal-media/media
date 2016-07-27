@@ -53,6 +53,7 @@ class GalleryBundleTest extends WebTestBase {
       'delete media',
       'delete any media',
       'access media overview',
+      'access gallery_media_library entity browser pages',
     ]);
     $this->drupalLogin($adminUser);
   }
@@ -113,6 +114,15 @@ class GalleryBundleTest extends WebTestBase {
     $gallery = $this->loadMediaItem(reset($gallery_id));
     $gallery_thumbnail = $gallery->getType()->thumbnail($gallery);
     $this->assertEqual($gallery_thumbnail, $video_thumbnail, "Correct thumbnail detected.");
+  }
+
+  /**
+   * Tests that gallery option isn't available in gallery create bundle filters.
+   */
+  public function testGalleryOption() {
+    // Open the media library iframe used on add gallery page.
+    $this->drupalGet('entity-browser/modal/gallery_media_library');
+    $this->assertNoOption('edit-bundle-1', 'gallery');
   }
 
   /**
