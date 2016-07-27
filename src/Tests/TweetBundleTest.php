@@ -30,6 +30,7 @@ class TweetBundleTest extends WebTestBase {
     'media_entity_twitter',
     'node',
     'link',
+    'editor',
   ];
 
   /**

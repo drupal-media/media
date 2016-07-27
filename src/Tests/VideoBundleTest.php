@@ -30,6 +30,7 @@ class VideoBundleTest extends WebTestBase {
     'video_embed_field',
     'video_embed_media',
     'node',
+    'editor',
   ];
 
   /**

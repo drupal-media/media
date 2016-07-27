@@ -6,6 +6,8 @@
  */
 
 use Drupal\views\Entity\View;
+use \Drupal\Core\Config\ExtensionInstallStorage;
+use Drupal\editor\Entity\Editor;
 
 /**
  * Implements hook_requirements().
@@ -58,8 +60,40 @@ function media_install() {
     $view->set('status', FALSE);
     $view->save();
   }
+
   // Copy the document icon files.
   $source = drupal_get_path('module', 'media') . '/images/icons';
   $destination = \Drupal::config('media_entity.settings')->get('icon_base');
   media_entity_copy_icons($source, $destination);
+
+  if (!\Drupal::isConfigSyncing()) {
+    // Add an icon for Media if we aren't installing from configuration.
+    // Read more about this implementation: https://www.drupal.org/node/2696593
+    $data = file_get_contents(dirname(__FILE__) . '/images/media_embed_icon.png');
+    $file = file_save_data($data, 'public://media_embed_icon.png', FILE_EXISTS_REPLACE);
+    // Set file uuid same as default config.
+    $uuid = (new ExtensionInstallStorage(\Drupal::service('config.storage')))->read('embed.button.media')['icon_uuid'];
+    $file->set('uuid', $uuid);
+    $file->save();
+  }
+
+  // Enable the media embed button and modify filters.
+  $filter_formats = \Drupal::entityTypeManager()->getStorage('filter_format')->loadByProperties(array('status' => TRUE));
+  foreach ($filter_formats as $filter_format) {
+    $editor = Editor::load($filter_format->getOriginalId());
+    if ($editor) {
+      // Make the changes to editor and filters only if editor type exists.
+      $editor_settings = $editor->getSettings();
+      $editor_settings['toolbar']['rows'][0][3]['items'][] = 'media';
+      $editor->setSettings($editor_settings);
+      $editor->save();
+      $format = $editor->getFilterFormat();
+      if ($format->filters('filter_html')->settings['allowed_html']) {
+        $format->filters('filter_html')->settings['allowed_html'] .= '<drupal-entity data-entity-type data-entity-uuid data-view-mode data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button>';
+      }
+      $format->setFilterConfig('entity_embed', ['status' => 1]);
+      $format->setFilterConfig('filter_html_image_secure', ['status' => 0]);
+      $format->save();
+    }
+  }
 }

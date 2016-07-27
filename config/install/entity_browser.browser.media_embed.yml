@@ -1,0 +1,73 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.image
+  module:
+    - dropzonejs_eb_widget
+    - entity_browser_entity_form
+    - media_entity
+    - views
+name: media_embed
+label: 'Media Embed'
+display: iframe
+display_configuration:
+  width: 100%
+  height: '768'
+  link_text: 'Select media'
+  auto_open: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  1672850b-3c24-400f-a0ed-a160efa55310:
+    settings:
+      view: media_library
+      view_display: media_select_modal
+      submit_text: 'Select media'
+    uuid: 1672850b-3c24-400f-a0ed-a160efa55310
+    weight: 1
+    label: 'All media'
+    id: view
+  6eea7af9-0310-4b02-a243-3eadc488a077:
+    settings:
+      view: media_library
+      view_display: user_media_select_modal
+      submit_text: 'Select media'
+    uuid: 6eea7af9-0310-4b02-a243-3eadc488a077
+    weight: 2
+    label: 'My media'
+    id: view
+  f3cd984b-a622-432b-b87c-e211a6b901e2:
+    settings:
+      media_entity_bundle: image
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drag and drop files here to upload'
+      max_filesize: 2M
+      extensions: 'png jpg jpeg gif'
+      submit_text: 'Select entities'
+    uuid: f3cd984b-a622-432b-b87c-e211a6b901e2
+    weight: 3
+    label: 'Add images'
+    id: dropzonejs_media_entity
+  927280a8-090f-4de8-b66a-932c81ed13c3:
+    settings:
+      entity_type: media
+      bundle: video
+      form_mode: default
+      submit_text: 'Save video'
+    uuid: 927280a8-090f-4de8-b66a-932c81ed13c3
+    weight: 4
+    label: 'Add video'
+    id: entity_form
+  c2f178e7-de55-4369-9c67-fee6ca2c11f0:
+    settings:
+      entity_type: media
+      bundle: document
+      form_mode: default
+      submit_text: 'Save document'
+    uuid: c2f178e7-de55-4369-9c67-fee6ca2c11f0
+    weight: 5
+    label: 'Add document'
+    id: entity_form

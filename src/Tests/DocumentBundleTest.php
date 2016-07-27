@@ -29,6 +29,7 @@ class DocumentBundleTest extends WebTestBase {
     'media_entity',
     'media_entity_document',
     'node',
+    'editor',
   ];
 
   /**

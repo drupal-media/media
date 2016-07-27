@@ -29,6 +29,7 @@ class GalleryBundleTest extends WebTestBase {
     'media_entity',
     'media_entity_slideshow',
     'node',
+    'editor',
   ];
 
   /**
