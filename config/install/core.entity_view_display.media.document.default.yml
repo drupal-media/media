@@ -5,11 +5,9 @@ dependencies:
     - field.field.media.document.field_document
     - field.field.media.document.field_document_size
     - field.field.media.document.field_mime_type
-    - image.style.thumbnail
     - media_entity.bundle.document
   module:
     - file
-    - image
     - user
 id: media.document.default
 targetEntityType: media
@@ -26,11 +24,11 @@ content:
       timezone: ''
     third_party_settings: {  }
   field_document:
+    type: file_default
     weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: file_default
   field_document_size:
     weight: 4
     label: above
@@ -39,13 +37,6 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
-  field_mime_type:
-    weight: 3
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
   name:
     label: hidden
     type: string
@@ -53,18 +44,12 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  thumbnail:
-    type: image
-    weight: 1
-    label: hidden
-    settings:
-      image_style: thumbnail
-      image_link: ''
-    third_party_settings: {  }
   uid:
     label: hidden
     type: author
     weight: 0
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_mime_type: true
+  thumbnail: true

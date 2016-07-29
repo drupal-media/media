@@ -82,11 +82,11 @@ class GalleryBundleTest extends WebTestBase {
     $imageItem = $this->addImageItem();
     $videoItem = $this->addVideoItem();
     $this->drupalGet('media/add/gallery');
-    $pathValue = (string) current($this->xpath('//input[@data-drupal-selector="edit-field-slide-entity-browser-path"]/@value'));
+    $pathValue = (string) current($this->xpath('//input[@data-drupal-selector="edit-field-slide-entity-browser-entity-browser-path"]/@value'));
     $edit = [
       'name[0][value]' => 'Gallery item',
-      'field_slide[target_id]' => $imageItem['id'] . ' ' . $videoItem['id'],
-      'field_slide[entity_browser][path]' => $pathValue,
+      'field_slide[target_id]' => 'media:' . $imageItem['id'] . ' media:' . $videoItem['id'],
+      'field_slide[entity_browser][entity_browser][path]' => $pathValue,
     ];
     $this->drupalPostForm(NULL, $edit, t('Save and publish'));
 
@@ -104,8 +104,8 @@ class GalleryBundleTest extends WebTestBase {
     $this->drupalGet('media/add/gallery');
     $edit = [
       'name[0][value]' => 'Gallery item 2',
-      'field_slide[target_id]' => $videoItem['id'] . ' ' . $imageItem['id'] ,
-      'field_slide[entity_browser][path]' => $pathValue,
+      'field_slide[target_id]' => 'media:' . $videoItem['id'] . ' media:' . $imageItem['id'],
+      'field_slide[entity_browser][entity_browser][path]' => $pathValue,
     ];
     $this->drupalPostForm(NULL, $edit, t('Save and publish'));
 
