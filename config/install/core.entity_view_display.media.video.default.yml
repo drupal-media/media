@@ -9,8 +9,6 @@ dependencies:
   module:
     - user
     - video_embed_field
-_core:
-  default_config_hash: 2estpN3n0MPLAQk-7-pHJljmIvjS5nB2thalsLpl_sM
 id: media.video.default
 targetEntityType: media
 bundle: video
@@ -24,13 +22,6 @@ content:
       date_format: medium
       custom_date_format: ''
       timezone: ''
-    third_party_settings: {  }
-  field_source:
-    type: string
-    weight: 4
-    label: above
-    settings:
-      link_to_entity: false
     third_party_settings: {  }
   field_video:
     type: video_embed_field_video
@@ -57,4 +48,5 @@ content:
     third_party_settings: {  }
 hidden:
   field_id: true
+  field_source: true
   thumbnail: true

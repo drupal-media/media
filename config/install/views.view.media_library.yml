@@ -9,7 +9,7 @@ dependencies:
     - media_entity
     - user
 _core:
-  default_config_hash: 0ji-_wovtfp2r4Pi6Rkl-EdQB0cymoCPWDy2Mz95csQ
+  default_config_hash: gblZ-hzi_lZXvgCyokEGvW9LgL3IP_2I_TZduF5S_fc
 id: media_library
 label: 'Media Library'
 module: views
@@ -310,6 +310,9 @@ display:
         - 'config:core.entity_view_display.media.gallery.media_library'
         - 'config:core.entity_view_display.media.image.default'
         - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.instagram.default'
+        - 'config:core.entity_view_display.media.instagram.media_library'
+        - 'config:core.entity_view_display.media.tweet.default'
         - 'config:core.entity_view_display.media.video.default'
         - 'config:core.entity_view_display.media.video.media_library'
   gallery_media_select_modal:
@@ -630,6 +633,9 @@ display:
         - 'config:core.entity_view_display.media.gallery.media_library'
         - 'config:core.entity_view_display.media.image.default'
         - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.instagram.default'
+        - 'config:core.entity_view_display.media.instagram.media_library'
+        - 'config:core.entity_view_display.media.tweet.default'
         - 'config:core.entity_view_display.media.video.default'
         - 'config:core.entity_view_display.media.video.media_library'
   gallery_user_media_select_modal:
@@ -991,6 +997,9 @@ display:
         - 'config:core.entity_view_display.media.gallery.media_library'
         - 'config:core.entity_view_display.media.image.default'
         - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.instagram.default'
+        - 'config:core.entity_view_display.media.instagram.media_library'
+        - 'config:core.entity_view_display.media.tweet.default'
         - 'config:core.entity_view_display.media.video.default'
         - 'config:core.entity_view_display.media.video.media_library'
   global_media_library_page:
@@ -1097,7 +1106,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Provider
+          label: Type
           exclude: false
           alter:
             alter_text: false
@@ -1141,7 +1150,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -1458,6 +1467,9 @@ display:
         - 'config:core.entity_view_display.media.gallery.media_library'
         - 'config:core.entity_view_display.media.image.default'
         - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.instagram.default'
+        - 'config:core.entity_view_display.media.instagram.media_library'
+        - 'config:core.entity_view_display.media.tweet.default'
         - 'config:core.entity_view_display.media.video.default'
         - 'config:core.entity_view_display.media.video.media_library'
   media_select_modal:
@@ -1736,6 +1748,9 @@ display:
         - 'config:core.entity_view_display.media.gallery.media_library'
         - 'config:core.entity_view_display.media.image.default'
         - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.instagram.default'
+        - 'config:core.entity_view_display.media.instagram.media_library'
+        - 'config:core.entity_view_display.media.tweet.default'
         - 'config:core.entity_view_display.media.video.default'
         - 'config:core.entity_view_display.media.video.media_library'
   user_media_library:
@@ -1878,7 +1893,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Provider
+          label: Type
           exclude: false
           alter:
             alter_text: false
@@ -1922,7 +1937,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -2238,6 +2253,9 @@ display:
         - 'config:core.entity_view_display.media.gallery.media_library'
         - 'config:core.entity_view_display.media.image.default'
         - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.instagram.default'
+        - 'config:core.entity_view_display.media.instagram.media_library'
+        - 'config:core.entity_view_display.media.tweet.default'
         - 'config:core.entity_view_display.media.video.default'
         - 'config:core.entity_view_display.media.video.media_library'
   user_media_select_modal:
@@ -2557,5 +2575,8 @@ display:
         - 'config:core.entity_view_display.media.gallery.media_library'
         - 'config:core.entity_view_display.media.image.default'
         - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.instagram.default'
+        - 'config:core.entity_view_display.media.instagram.media_library'
+        - 'config:core.entity_view_display.media.tweet.default'
         - 'config:core.entity_view_display.media.video.default'
         - 'config:core.entity_view_display.media.video.media_library'
