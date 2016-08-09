@@ -30,7 +30,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      link_to_entity: false
+      link_to_entity: true
     third_party_settings: {  }
   thumbnail:
     type: image
