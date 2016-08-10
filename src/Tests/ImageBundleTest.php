@@ -30,6 +30,7 @@ class ImageBundleTest extends WebTestBase {
     'media_entity_image',
     'image',
     'node',
+    'editor',
   ];
 
   /**

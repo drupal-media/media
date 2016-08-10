@@ -1,0 +1,9 @@
+name: 'Media Embed Test'
+description: 'Support module for the media embed tests.'
+type: module
+package: Testing
+core: 8.x
+version: VERSION
+dependencies:
+  - editor:editor
+  - ckeditor:ckeditor

@@ -30,6 +30,7 @@ class InstagramBundleTest extends WebTestBase {
     'media_entity_instagram',
     'link',
     'node',
+    'editor',
   ];
 
   /**

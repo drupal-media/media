@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:39004672-000c-4b13-af59-838822a4bc5a'
+  module:
+    - entity_embed
+    - media_entity
+label: Media
+id: media
+type_id: entity
+type_settings:
+  entity_type: media
+  bundles: {  }
+  display_plugins: {  }
+  entity_browser: media_embed
+  entity_browser_settings:
+    display_review: false
+icon_uuid: 39004672-000c-4b13-af59-838822a4bc5a
