@@ -1,137 +1,19 @@
-/**
-* @file media.view.css
-*/
-
-/* Generic styles */
-/* modified CSS*/
-.view-content{
-    text-align: center;
-    margin: 0px auto;
-    width: 100% !important;
+.view-content, .entities-list{
+    margin: 1.5em 0;
+    padding: 0;
+    -moz-column-gap: 1.5em;
+    -webkit-column-gap: 1.5em;
+    column-gap: 1.5em;
 }
-select {
-    max-width: 100% !important;
-    padding: 2px !important;
-    line-height: 24px !important;
-    min-width: 100px !important;
-}
-.form--inline{
-    padding: 5px 5px 5px 20px !important;
-    background: #f2f2f2 !important;
-    margin-bottom: 15px !important;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.2) !important;
-}
-
-.grid-item.item-style, .grid-item-library.item-style  {
-    opacity: 1;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
-    padding: 10px !important;
-    background: #fff !important;
-    border: 1px solid #ddd !important;
-    margin: 8px !important;
-}
-.form-actions{
-    text-align:center;
-}
-.pager {
-    padding: 20px;
-}
-
-/* set default standard media queries for responsive grid. */
-@media only screen and (min-width: 320px) {
-    .grid-sizer,
-    .grid-item {
-        width: 100%;
-    }
-    .gutter-sizer {
-        width: 10px;
-    }
-    .grid-item {
-        margin-bottom: 10px;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    .grid-sizer,
-    .grid-item {
-        width: 46%;
-    }
-    .gutter-sizer {
-        width: 10px;
-    }
-    .grid-item {
-        margin-bottom: 10px;
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    .grid-sizer,
-    .grid-item {
-        width: 23%;
-    }
-    .gutter-sizer {
-        width: 10px;
-    }
-    .grid-item {
-        margin-bottom: 10px;
-    }
-}
-
-/* Jump back down for XL screens to better utilize the space. */
-@media only screen and (min-width: 1600px) {
-    .grid-sizer,
-    .grid-item {
-        width: 45%;
-    }
-    .gutter-sizer {
-        width: 10px;
-    }
-    .grid-item {
-        margin-bottom: 10px;
-    }
-}
-
-.grid-item {
-    opacity: 0;
-    position:relative;
-    text-align: center;
-    float:left;
-    background: #fff;
-    padding: 1.5em;
-    width: 45%;
-    margin-bottom: 20px;
-    height:auto;
-    box-sizing: border-box;
-    cursor:pointer;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.18);
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    transition: .2s;
-}
-
-
 .grid-item:hover {
     border: 2px solid #37802f !important;
+    cursor : pointer;
 }
 
 .grid-item.checked {
     border: 2px solid #37802f !important;
     background: url("../images/checkmark.svg") no-repeat center center !important;
 }
-.view-content-library {
-    min-width:100%;
-}
-.view-content:after, .view-content-library:after{
-    content: '';
-    display: block;
-    clear: both;
-}
-
 .grid-item img, .grid-item-library img {
     vertical-align: bottom;
 }
@@ -140,151 +22,49 @@ select {
     background: transparent;
 }
 
-.grid-item.views-field-entity-browser-select , .grid-item-library.views-field-entity-browser-select{
+.views-field-entity-browser-select{
     display: none;
 }
 
-.grid-item:after {
-    content: " ";
-    float:left;
-    position:relative;
-    display:block;
-    clear:both;
-    background: transparent url("../images/checkmark.svg") no-repeat center center;
-    background-size: 0;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-}
-
-.grid-item.checked:after {
-    background-size: 54px 54px;
-}
-
-.grid-item-info {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, .8);
-}
-
-.grid-item-info-left,
-.grid-item-info-right {
-    padding: 5px;
-    color: white;
-}
-
-.grid-item-info-left {
-    float: left;
-    text-align: left;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.grid-item-info-right {
-    float: right;
-}
-
-input[type="submit"][name="filter"] {
-    margin-left: 10px;
-    margin-top: 30px;
-}
-
-
-/********************************************************************/
-/*User library.css*/
-/* Generic styles */
-/* modified CSS*/
-
-
-
-
-/* set default standard media queries for responsive grid. */
-@media only screen and (min-width: 320px) {
-    .grid-size-library,
-    .grid-item-library {
-        width: 100% !important;
-    }
-    .gutter-sizer-library {
-        width: 5px;
-    }
-    .grid-item-library{
-        margin-bottom : 5px;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    .grid-sizer-library,
-    .grid-item-library {
-        width: 96% !important;
-    }
-    .gutter-sizer-library {
-        width: 10px;
-    }
-    .grid-item-library{
-        margin-bottom:10px;
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    .grid-sizer-library,
-    .grid-item-library {
-        width: 31.33% !important;
-    }
-    .gutter-size-library {
-        width: 10px;
-    }
-    .grid-item-library{
-        margin-bottom:10px;
-    }
-}
-
-/* Jump back down for XL screens to better utilize the space. */
-@media only screen and (min-width: 1280px) {
-    .grid-size-library,
-    .grid-item-library {
-        width: 23% !important;
-    }
-    .gutter-size-library {
-        width: 7px;
-    }
-    .grid-item-library{
-        margin-bottom:10px;
-    }
-}
-
-.grid-item-library {
-    opacity: 0;
-    position:relative;
-    text-align: center;
-    float:left;
+.grid-item-library, .grid-item, .item-container{
+    display: inline-block;
     background: #fff;
     padding: 1.5em;
-    width: 24%;
-    margin-bottom: 8px;
-    height:auto;
+    margin: 0 0 1.5em;
+    width: 100%;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.18);
     border-radius: 3px;
+    border: 1px solid #ddd;
+    text-align:center;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    transition: .2s;
+}
+@media only screen and (min-width: 700px) {
+    .view-content, .entities-list{
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
 }
 
-
-.grid-item-library:after {
-    content: " ";
-    float:left;
-    position:relative;
-    display:block;
-    clear:both;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
+@media only screen and (min-width: 900px) {
+    .view-content, .entities-list{
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
 }
 
-.grid-item .views-field-entity-browser-select {
-    display: none;
+@media only screen and (min-width: 1100px) {
+    .view-content, .entities-list{
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+}
+#edit-actions{
+    text-align:center;
 }
