@@ -38,19 +38,8 @@ function media_form_alter(&$form, FormStateInterface &$form_state) {
   if ($form['#id'] == 'views-exposed-form-media-library-gallery-media-select-modal' || $form['#id'] == 'views-exposed-form-media-library-gallery-user-media-select-modal') {
     unset($form['bundle_1']['#options']['gallery']);
   }
-}
-
-/**
- * Implements hook_library_info_alter().
- */
-function media_library_info_alter(&$libraries, $extension) {
-  // Optionally use the Libraries module to determine our library paths.
-  if ($extension == 'media' && \Drupal::moduleHandler()->moduleExists('libraries')) {
-    $imagesloaded_path = libraries_get_path('imagesloaded') . '/imagesloaded.pkgd.min.js';
-    $masonry_path = libraries_get_path('masonry') . '/dist/masonry.pkgd.min.js';
-
-    $libraries['imagesloaded']['js'] = ['/' . $imagesloaded_path => ['minified' => 'true']];
-    $libraries['masonry']['js'] = ['/' . $masonry_path => ['minified' => 'true']];
+  if ($form['#form_id'] == 'media_gallery_form') {
+    $form['#attached']['library'][] = 'media/view';
   }
 }
 

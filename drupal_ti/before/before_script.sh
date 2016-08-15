@@ -23,6 +23,4 @@ cd "$DRUPAL_TI_DRUPAL_DIR"
 mkdir libraries
 cd libraries
 git clone --depth 1 https://github.com/enyo/dropzone.git
-git clone --depth 1 https://github.com/desandro/imagesloaded.git
-git clone --depth 1 https://github.com/desandro/masonry.git
 

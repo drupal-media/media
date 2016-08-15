@@ -32,7 +32,7 @@ content:
     type: string
     weight: 0
     settings:
-      link_to_entity: false
+      link_to_entity: true
     third_party_settings: {  }
   thumbnail:
     type: image

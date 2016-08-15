@@ -3,15 +3,18 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.media_library
-    - field.field.media.instagram.field_instagram_shortcode
-    - field.field.media.instagram.field_instagram_url
-    - media_entity.bundle.instagram
+    - field.field.media.tweet.field_tweet_author
+    - field.field.media.tweet.field_tweet_id
+    - field.field.media.tweet.field_tweet_url
+    - media_entity.bundle.tweet
   module:
-    - media_entity_instagram
+    - media_entity_twitter
     - user
-id: media.instagram.media_library
+_core:
+  default_config_hash: CGkENzPx_szsVtDhN6ptOL28tAGnZDTvboNR7L38_sI
+id: media.tweet.media_library
 targetEntityType: media
-bundle: instagram
+bundle: tweet
 mode: media_library
 content:
   created:
@@ -23,14 +26,12 @@ content:
       custom_date_format: ''
       timezone: ''
     third_party_settings: {  }
-  field_instagram_url:
+  field_tweet_url:
     weight: 1
     label: hidden
-    settings:
-      width: 260
-      height: 340
+    settings: {  }
     third_party_settings: {  }
-    type: instagram_embed
+    type: twitter_embed
   name:
     label: hidden
     type: string
@@ -45,5 +46,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_instagram_shortcode: true
+  field_tweet_author: true
+  field_tweet_id: true
   thumbnail: true
