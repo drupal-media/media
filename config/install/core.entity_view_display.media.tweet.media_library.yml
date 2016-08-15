@@ -11,7 +11,7 @@ dependencies:
     - media_entity_twitter
     - user
 _core:
-  default_config_hash: 9tfXn_NAZaYHUzK1Jlr3DUM7ObafMZGlgtMpoUsyedQ
+  default_config_hash: CGkENzPx_szsVtDhN6ptOL28tAGnZDTvboNR7L38_sI
 id: media.tweet.media_library
 targetEntityType: media
 bundle: tweet
@@ -20,14 +20,14 @@ content:
   created:
     label: hidden
     type: timestamp
-    weight: 0
+    weight: 3
     settings:
       date_format: medium
       custom_date_format: ''
       timezone: ''
     third_party_settings: {  }
   field_tweet_url:
-    weight: 2
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -35,14 +35,14 @@ content:
   name:
     label: hidden
     type: string
-    weight: -5
+    weight: 0
     settings:
       link_to_entity: true
     third_party_settings: {  }
   uid:
     label: hidden
     type: author
-    weight: 0
+    weight: 2
     settings: {  }
     third_party_settings: {  }
 hidden:

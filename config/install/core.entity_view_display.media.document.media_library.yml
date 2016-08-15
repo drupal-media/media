@@ -13,7 +13,7 @@ dependencies:
     - image
     - user
 _core:
-  default_config_hash: KuK0p5fq6F8sdP4Tm-AL_EZK2cBcys2jVAPZm2ITyvs
+  default_config_hash: x_n0Hh8fjeFKYeDq-rWrWsjFS7WwXqE5Cs2pP4waH4k
 id: media.document.media_library
 targetEntityType: media
 bundle: document
@@ -22,7 +22,7 @@ content:
   created:
     label: hidden
     type: timestamp
-    weight: 0
+    weight: 5
     settings:
       date_format: medium
       custom_date_format: ''
@@ -35,7 +35,7 @@ content:
     third_party_settings: {  }
     type: file_default
   field_document_size:
-    weight: 4
+    weight: 3
     label: hidden
     settings:
       thousand_separator: ''
@@ -45,7 +45,7 @@ content:
   name:
     label: hidden
     type: string
-    weight: -5
+    weight: 0
     settings:
       link_to_entity: true
     third_party_settings: {  }
@@ -60,7 +60,7 @@ content:
   uid:
     label: hidden
     type: author
-    weight: 0
+    weight: 4
     settings: {  }
     third_party_settings: {  }
 hidden:
