@@ -1,9 +1,9 @@
-uuid: 35fd38d1-bf97-4f94-a100-774c62d64efd
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.media.image.field_image
+    - image.style.media_crop
     - media_entity.bundle.image
   module:
     - image
@@ -26,7 +26,7 @@ content:
     weight: 3
     label: hidden
     settings:
-      image_style: ''
+      image_style: media_crop
       image_link: ''
     third_party_settings: {  }
     type: image

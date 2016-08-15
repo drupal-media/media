@@ -6,9 +6,9 @@ dependencies:
     - image.style.thumbnail
     - media_entity.bundle.image
   module:
-    - image
+    - image_widget_crop
 _core:
-  default_config_hash: CvBcjslOiCt93i4FoaGc9v4nddjePzb07q4HJaMk0Mo
+  default_config_hash: gjTmlQr8X0XHAHkFusXkMiumsjC5Tjm5koTVTVD_cjA
 id: media.image.default
 targetEntityType: media
 bundle: image
@@ -17,10 +17,15 @@ content:
   field_image:
     weight: 1
     settings:
-      progress_indicator: throbber
+      show_default_crop: true
       preview_image_style: thumbnail
+      crop_preview_image_style: media_crop_preview
+      crop_list:
+        - media_crop
+      progress_indicator: throbber
+      show_crop_area: false
     third_party_settings: {  }
-    type: image_image
+    type: image_widget_crop
   name:
     type: string_textfield
     weight: 0

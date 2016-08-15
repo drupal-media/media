@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: media_crop_preview
+label: 'Media Crop Preview'
+effects:
+  30fad5b9-974c-478a-a184-49eceaf12fdb:
+    uuid: 30fad5b9-974c-478a-a184-49eceaf12fdb
+    id: image_scale
+    weight: 1
+    data:
+      width: 800
+      height: null
+      upscale: false

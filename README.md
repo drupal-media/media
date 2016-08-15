@@ -20,6 +20,7 @@ Media's aim is to solve Drupal's long standing media handling problem.
 * [Slick Media](https://www.drupal.org/project/slick_media)
 * [Entity Browser](https://www.drupal.org/project/entity_browser)
 * [Dropzonejs](https://www.drupal.org/project/dropzonejs)
+* [Image Widget Crop](https://www.drupal.org/project/image_widget_crop)
 
 ## Installation
 
