@@ -18,6 +18,7 @@
     "drupal/image_widget_crop": "^8.1",
     "drupal/entity_embed": "^8.1@alpha",
     "drupal/entity_browser": "8.1.x-dev",
+    "drupal/media_entity_image": "^8.1",
     "drupal/media_entity_document": "^8.1",
     "drupal/video_embed_field": "^8.1",
     "drupal/media_entity_twitter": "^8.1",
