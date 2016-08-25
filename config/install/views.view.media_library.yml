@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.media_library
-    - media_entity.bundle.gallery
   module:
     - entity_browser
     - media_entity
