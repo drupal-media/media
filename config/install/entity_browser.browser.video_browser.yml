@@ -1,0 +1,38 @@
+uuid: 39147093-c7a1-41b0-9773-b013ad388a50
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_browser_entity_form
+    - views
+name: video_browser
+label: 'Video Browser'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select Video'
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  903696a4-018e-4fde-b618-f2ad0912ffde:
+    settings:
+      view: media_library
+      view_display: entity_browser_1
+      submit_text: 'Select entities'
+    uuid: 903696a4-018e-4fde-b618-f2ad0912ffde
+    weight: 1
+    label: Library
+    id: view
+  3419f90a-b778-420e-8a51-a8f393ea47e4:
+    settings:
+      entity_type: media
+      bundle: video
+      form_mode: default
+      submit_text: 'Add Video'
+    uuid: 3419f90a-b778-420e-8a51-a8f393ea47e4
+    weight: 2
+    label: 'Add video(s)'
+    id: entity_form

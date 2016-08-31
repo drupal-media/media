@@ -1,0 +1,31 @@
+uuid: c944e8d9-da60-4b74-80e9-1d3feaeadcd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_only
+    - field.field.media.image.field_image
+    - image.style.media_crop
+    - media_entity.bundle.image
+  module:
+    - image
+_core:
+  default_config_hash: OEJiytCdooD4v_2sFpUNN5aHtSClNW26kFVnToBcPU4
+id: media.image.media_only
+targetEntityType: media
+bundle: image
+mode: media_only
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: media_crop
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

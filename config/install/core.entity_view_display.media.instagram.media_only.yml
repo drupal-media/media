@@ -1,0 +1,32 @@
+uuid: aa968d26-a2d2-4e83-a3ed-77ca82ec8fe1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_only
+    - field.field.media.instagram.field_instagram_shortcode
+    - field.field.media.instagram.field_instagram_url
+    - media_entity.bundle.instagram
+  module:
+    - media_entity_instagram
+_core:
+  default_config_hash: uCrDQ-K-DnApnvCiAC1-waDXYhzBY5uRzfk1BI0S-JQ
+id: media.instagram.media_only
+targetEntityType: media
+bundle: instagram
+mode: media_only
+content:
+  field_instagram_url:
+    weight: 0
+    label: hidden
+    settings:
+      width: 480
+      height: 640
+    third_party_settings: {  }
+    type: instagram_embed
+hidden:
+  created: true
+  field_instagram_shortcode: true
+  name: true
+  thumbnail: true
+  uid: true

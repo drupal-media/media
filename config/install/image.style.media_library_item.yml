@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: CxKqipu7yjtFAn40Pe3DhGQ3BbeagRtTMY6r4LbMARM
 name: media_library_item
 label: 'Media library item'
 effects:
