@@ -8,6 +8,22 @@
   },
   "license": "GPL-2.0+",
   "minimum-stability": "dev",
-  "require": { }
+  "require": {
+    "drupal/media_entity": "8.1.*@dev",
+    "drupal/media_entity_image": "8.1.*@dev",
+    "drupal/video_embed_field": "8.1.*@dev",
+    "drupal/media_entity_slideshow": "8.1.*@dev",
+    "drupal/media_entity_instagram": "8.1.*@dev",
+    "drupal/media_entity_twitter": "8.1.*@dev",
+    "drupal/media_entity_document": "8.1.*@dev",
+    "drupal/slick_media": "8.1.*@dev",
+    "drupal/entity_browser": "8.1.*@dev",
+    "drupal/entity_embed": "8.1.*@dev",
+    "drupal/dropzonejs": "8.1.*@dev",
+    "drupal/image_widget_crop": "8.1.*@dev",
+    "drupal/link": "8.1.*@dev",
+    "drupal/editor": "8.1.*@dev",
+    "drupal/inline_entity_form": "8.1.*@dev"
+  }
 }
 
