@@ -20,3 +20,5 @@ dependencies:
   - image_widget_crop:image_widget_crop
   - link:link
   - editor:editor
+  - inline_entity_form:inline_entity_form
+
