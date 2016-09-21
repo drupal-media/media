@@ -33,6 +33,7 @@ function media_install() {
     $uuid = (new ExtensionInstallStorage(\Drupal::service('config.storage')))->read('embed.button.media')['icon_uuid'];
     $file->set('uuid', $uuid);
     $file->save();
+    \Drupal::service('file.usage')->add($file, 'embed', 'embed_button', 'media');
   }
 
   // Enable the media embed button and modify filters.
