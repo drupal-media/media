@@ -26,6 +26,8 @@ Media's aim is to solve Drupal's long standing media handling problem.
 
 After downloading the module in the modules folder, visit the Extend (/admin/modules) page to enable the module. You might have to install the modules required before enabling this module.
 
+Documentation for the module is available in the [Drupal 8 Media Guide](https://drupal-media.gitbooks.io/drupal8-guide/content/modules/media/intro.html).
+
 ## Configuration
 
 1. Enable the module
