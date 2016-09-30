@@ -3,12 +3,11 @@ status: true
 dependencies:
   config:
     - field.field.media.image.field_image
+    - field.field.media.image.field_media_in_library
     - image.style.thumbnail
     - media_entity.bundle.image
   module:
     - image_widget_crop
-_core:
-  default_config_hash: gjTmlQr8X0XHAHkFusXkMiumsjC5Tjm5koTVTVD_cjA
 id: media.image.default
 targetEntityType: media
 bundle: image
@@ -26,6 +25,12 @@ content:
       show_crop_area: false
     third_party_settings: {  }
     type: image_widget_crop
+  field_media_in_library:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
   name:
     type: string_textfield
     weight: 0

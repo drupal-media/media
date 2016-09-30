@@ -2,17 +2,22 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.gallery.field_media_in_library
     - field.field.media.gallery.field_slide
     - media_entity.bundle.gallery
   module:
     - entity_browser
-_core:
-  default_config_hash: MRHE_lJPiW9p2Vpq0-N5s3aKDqqMfF6ioNKYolkiTr8
 id: media.gallery.default
 targetEntityType: media
 bundle: gallery
 mode: default
 content:
+  field_media_in_library:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
   field_slide:
     weight: 1
     settings:
