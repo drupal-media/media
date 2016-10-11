@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.gallery.field_media_in_library
     - field.field.media.gallery.field_slide
     - media_entity.bundle.gallery
   module:
@@ -93,10 +94,12 @@ content:
       box_style: ''
       icon: false
       dimension: ''
+      thumbnail_position: ''
     third_party_settings: {  }
     type: slick_media
 hidden:
   created: true
+  field_media_in_library: true
   name: true
   thumbnail: true
   uid: true

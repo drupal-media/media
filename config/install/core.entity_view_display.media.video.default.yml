@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.media.video.field_id
+    - field.field.media.video.field_media_in_library
     - field.field.media.video.field_source
     - field.field.media.video.field_video
     - media_entity.bundle.video
@@ -48,5 +49,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_id: true
+  field_media_in_library: true
   field_source: true
   thumbnail: true
