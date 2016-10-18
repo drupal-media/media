@@ -18,8 +18,8 @@ dependencies:
   - entity_embed:entity_embed
   - dropzonejs:dropzonejs_eb_widget
   - image_widget_crop:image_widget_crop
-  - link:link
-  - editor:editor
+  - drupal:link
+  - drupal:editor
   - inline_entity_form:inline_entity_form
 test_dependencies:
   - media_entity:media_entity
@@ -36,7 +36,7 @@ test_dependencies:
   - entity_embed:entity_embed
   - dropzonejs:dropzonejs_eb_widget
   - image_widget_crop:image_widget_crop
-  - link:link
-  - editor:editor
+  - drupal:link
+  - drupal:editor
   - inline_entity_form:inline_entity_form
 
