@@ -24,4 +24,11 @@
     "drupal/media_entity_twitter": "^8.1",
     "drupal/media_entity_instagram": "^8.1"
   }
+  "extra": {
+        "patches": {
+            "drupal/entity_browser": {
+                "Fix bug when wysiwyg embedding if a video is already embedded https://www.drupal.org/node/2822961": "https://www.drupal.org/files/issues/embedded_video_breaks-2822961-2.patch"
+            }
+        }
+    }
 }
