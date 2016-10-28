@@ -23,7 +23,7 @@
     "drupal/video_embed_field": "^8.1",
     "drupal/media_entity_twitter": "^8.1",
     "drupal/media_entity_instagram": "^8.1"
-  }
+  },
   "extra": {
         "patches": {
             "drupal/entity_browser": {
