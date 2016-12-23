@@ -14,7 +14,6 @@ dependencies:
   - entity_browser:entity_browser
   - entity_browser:entity_browser_entity_form
   - entity_embed:entity_embed
-  - image_widget_crop:image_widget_crop
   - link:link
   - editor:editor
   - inline_entity_form:inline_entity_form
