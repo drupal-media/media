@@ -71,3 +71,13 @@ function media_entity_type_alter(array &$entity_types) {
   $field_name = \Drupal::config('media_entity.bundle.gallery')->get('type_configuration.source_field');
   $entity_types['media']->addConstraint('GalleryMediaBundle', array('sourceFieldName' => $field_name));
 }
+
+/**
+ * Implements hook_menu_links_discovered_alter().
+ */
+function media_menu_links_discovered_alter(&$links) {
+  // Media entity module provides a default view which we disable. Since it also
+  // provides a link entry for it we need to update the route there to point to
+  // the media library we provide.
+  $links['entity.media.collection']['route_name'] = 'view.media_library.global_media_library_page';
+}
