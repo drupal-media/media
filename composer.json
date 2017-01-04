@@ -15,7 +15,7 @@
     }
   ],
   "require": {
-    "drupal/image_widget_crop": "8.x-1.x-dev",
+    "drupal/image_widget_crop": "8.1.x-dev",
     "drupal/entity_embed": "8.1.0-beta2",
     "drupal/entity_browser": "8.1.0-beta2",
     "drupal/media_entity_image": "^8.1.2",
