@@ -1,6 +1,6 @@
-# Media Module
+# Media Module (ThinkShout Edition)
 
-[![Build Status](https://travis-ci.org/drupal-media/media.svg?branch=8.x-1.x)](https://travis-ci.org/drupal-media/media) [![Scrutinizer](https://scrutinizer-ci.com/g/drupal-media/media/badges/quality-score.png?b=8.x-1.x)](https://scrutinizer-ci.com/g/drupal-media/media/?branch=8.x-1.x)
+[![Build Status](https://travis-ci.org/thinkshout/media.svg?branch=8.x-1.x)](https://travis-ci.org/thinkshout/media) [![Scrutinizer](https://scrutinizer-ci.com/g/thinkshout/media/badges/quality-score.png?b=8.x-1.x)](https://scrutinizer-ci.com/g/thinkshout/media/?branch=8.x-1.x)
 
 ## Introduction
 
